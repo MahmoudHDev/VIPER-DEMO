@@ -71,6 +71,8 @@ class MainViewController: UIViewController, MainViewPr {
     func userUpdateFailed(error: String) {
         print("Error has been occured \(error)")
         DispatchQueue.main.async {
+            self.myLabel.isHidden = false
+            self.myLabel.text = error
             self.tableView.isHidden = true
         }
         
